@@ -130,6 +130,13 @@ if ! git rev-parse --is-inside-work-tree &> /dev/null; then
 fi
 echo "Current directory is a git repository"
 
+# Add all changes
+if ! git add .; then
+    echo "Error: Failed to add changes"
+    exit 1
+fi
+echo "git add successful"
+
 # Check if branch is up to date with origin/main
 git fetch origin main &> /dev/null
 local_commit=$(git rev-parse HEAD)
@@ -139,13 +146,6 @@ if [ "$local_commit" = "$remote_commit" ]; then
     echo "Your branch is up to date with 'origin/main'."
     exit 0
 fi
-
-# Add all changes
-if ! git add .; then
-    echo "Error: Failed to add changes"
-    exit 1
-fi
-echo "git add successful"
 
 # Display commit type options
 echo "Choose commit type (1-11):"
