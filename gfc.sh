@@ -5,7 +5,7 @@
 # Author: peterweissdk
 # Email: peterweissdk@flems.dk
 # Date: 2025-06-28
-# Version: v1.0.0
+# Version: v1.0.1
 # Usage: Run gfc.sh, follow instructions or -h for help
 # ----------------------------------------------------------------------------
 
