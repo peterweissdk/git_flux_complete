@@ -137,16 +137,6 @@ if ! git add .; then
 fi
 echo "git add successful"
 
-# Check if branch is up to date with origin/main
-git fetch origin main &> /dev/null
-local_commit=$(git rev-parse HEAD)
-remote_commit=$(git rev-parse origin/main)
-
-if [ "$local_commit" = "$remote_commit" ]; then
-    echo "Your branch is up to date with 'origin/main'."
-    exit 0
-fi
-
 # Display commit type options
 echo "Choose commit type (1-11):"
 echo "1:  feat – a new feature is introduced with the changes"
