@@ -11,6 +11,7 @@ A shell script utility for enhanced Git workflow management and Flux reconciliat
 ## ✨ Features
 
 - Streamlined Git workflow management
+- Flux reconciliation
 - Simplified commit process
 - Interactive command-line interface
 
